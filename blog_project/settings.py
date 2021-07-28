@@ -52,6 +52,9 @@ INSTALLED_APPS = [
     
     'rest_auth',
     'rest_auth.registration',
+    
+    # documentation
+    'rest_framework_swagger'
   
 ]
 
@@ -74,6 +77,8 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     ],
+     
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' 
 }
 
 MIDDLEWARE = [
